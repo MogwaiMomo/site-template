@@ -65,16 +65,16 @@
 	  }
 
 
-	var page = document.getElementById('page');
+	// var page = document.getElementById('page');
 
 	//Fade out the intro
-	page.addEventListener('click', function(ev){
+	window.addEventListener('click', function(ev){
 		ev.preventDefault();
 		document.getElementById('intro').className += " fade";
 	}, false);
 
 	//Start the animation
-	page.addEventListener('click', function(ev){
+	window.addEventListener('click', function(ev){
 		ev.preventDefault();
 		requestAnimationFrame(animate);
 	}, false);
