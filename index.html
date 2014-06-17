@@ -9,25 +9,28 @@
 	<link rel="stylesheet" href="css/text.css">
 	<link rel="stylesheet" href="css/grid.css">
 	<link rel="stylesheet" href="css/style.css">
-
-	<!-- Use if necessary: -->
-<!-- 	<link rel="stylesheet" href="css/animate.css">
- -->
-
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
 </head>
 
-<body>
-
+<body id="page">
 	<div class="section group container">
-		<div class="col span_2_of_3 border item">
-		<h1>Click anywhere to start the show ...</h1>
+			
+		<h1 id="intro" class="appear col span_2_of_3 item">Click anywhere to start the show...</h1>
+
+		<canvas id="canvas" class="col span_2_of_3 item">Your browser needs to support the HTML5 canvas element before this show can play.</canvas> 
+		
 		</div>
 		
 	</div>
 
+	<script type="text/javascript" src="js/control.js"></script>
+
 </body>
 
 </html>
+
+
+		<!-- On click:
+
+		5. Add Processing.js video
+		6. Canvas fades out; "The End" appears on screen
+		 -->
