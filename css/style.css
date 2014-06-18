@@ -93,6 +93,9 @@
   100% { opacity: 0; }
 }
 
+.white {
+  background-color:#fefefe;
+}
 
  /*for troubleshooting layout 
 */

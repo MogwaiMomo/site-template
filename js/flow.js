@@ -1,4 +1,4 @@
-// Crazy vendor compatibility stuff starts //
+// Shim starts //
  
 (function() {
     var lastTime = 0;
@@ -25,15 +25,14 @@
         };
 }());
 
-// Crazy vendor compatibility stuff ends //
+// Shim ends //
 
+//Start drawing the canvas
+var canvas = document.getElementById('canvas');		
+var ctx = canvas.getContext('2d');
 
-(function(){
+function init(){
 	
-	//Start drawing the canvas
-	var canvas = document.getElementById('canvas');		
-	var ctx = canvas.getContext('2d');
-			
     //Define the colour you want to use to fill the screen
     ctx.fillStyle="#fefefe"; //white
 
@@ -55,23 +54,16 @@
 		} 
 		else {
 			cancelAnimationFrame(requestID);
-			ctx.clearRect((canvas.width)/4, (canvas.height)/4, (canvas.width)/2, (canvas.height)/2);
-			// ctx.fillRect(0, 0, canvas.width, canvas.height);
+			document.getElementById('canvas').className += " white";
+			sound();
 		}
 		
 	  }
-
-	  //Start the animation
-	window.addEventListener('click', function(ev){
-		ev.preventDefault();
-		requestAnimationFrame(animate);
-	}, false);
-
-	
-
-}());
+	 requestAnimationFrame(animate);
+};
 
 // Animation stuff ends here // 
+
 
 
 // Sound stuff starts here: //
@@ -79,8 +71,8 @@
 var context;
 var url ="data/07 In The Lost and Found (Honky Bach).mp3";
 
-//executes on page click:
-function init() {
+//starts music on page click:
+function sound() {
 	try {
 		// fix up for prefixing
 		window.AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -121,8 +113,16 @@ function loadSound(context, url) {
 				function renderFrame() {
 					requestAnimationFrame(renderFrame);
 					analyser.getByteFrequencyData(frequencyData);
-					console.log(frequencyData)
-	}
+					// console.log(frequencyData[0]);
+					ctx.clearRect(0,0, canvas.width, canvas.height);
+					ctx.fillStyle = '#00CCFF';
+					bars = 100;
+					for (var i = 0; i < bars; i++) {
+						bar_x = i * 3;
+						bar_width = 2;
+						bar_height = -(frequencyData[i]/10);	
+						ctx.fillRect(bar_x, canvas.height, bar_width, bar_height);				}
+				}
 				//connect to speakers
 				soundSource.connect(context.destination);
 				soundSource.start(0);
@@ -138,24 +138,18 @@ function loadSound(context, url) {
 	request.send();
 };
 
+function trigger(ev){
+	ev.preventDefault();
+	document.getElementById('intro').className += " fade";
+	init();
 
+	setTimeout(function(){
+		window.removeEventListener('click', trigger, false);
+	}, 50);
+}
 
+//Trigger everything on user click:
+window.addEventListener('click', trigger, false);
 
-
-// Trigger events: 
-
-
-	//Fade out the intro
-	window.addEventListener('click', function(ev){
-		ev.preventDefault();
-		document.getElementById('intro').className += " fade";
-	}, false);
-
-	// Start the music
-
-	window.addEventListener("click", function(ev){
-		ev.preventDefault();
-		init();
-	}, false); 
 		
 	
