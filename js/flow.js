@@ -113,19 +113,30 @@ function loadSound(context, url) {
 				function renderFrame() {
 					requestAnimationFrame(renderFrame);
 					analyser.getByteFrequencyData(frequencyData);
-					// console.log(frequencyData[0]);
-					ctx.clearRect(0,0, canvas.width, canvas.height);
-					ctx.fillStyle = '#00CCFF';
+					ctx.clearRect(0,0, canvas.width, canvas.height);	
 					bars = 100;
 					for (var i = 0; i < bars; i++) {
 						bar_x = i * 3;
 						bar_width = 2;
-						bar_height = -(frequencyData[i]/10);	
-						ctx.fillRect(bar_x, canvas.height, bar_width, bar_height);				}
+						bar_height = -(frequencyData[i]/10);
+						ctx.fillStyle = '#D10700'; // red
+						ctx.fillRect(bar_x, canvas.height, bar_width, bar_height);
+						ctx.fillStyle='#EC4863'; // orange
+						ctx.fillRect(bar_x,(canvas.height+bar_height),bar_width, bar_height);
+						ctx.fillStyle='#FFDA66'; //banana yellow
+						ctx.fillRect(bar_x,(canvas.height+bar_height*2),bar_width, bar_height);
+						ctx.fillStyle='#1FCBC7'; //light green
+						ctx.fillRect(bar_x,(canvas.height+bar_height*3),bar_width, bar_height);
+						ctx.fillStyle='#2F89C2'; //blue
+						ctx.fillRect(bar_x,(canvas.height+bar_height*4),bar_width, bar_height);				}
 				}
 				//connect to speakers
 				soundSource.connect(context.destination);
 				soundSource.start(0);
+				setTimeout(function(){
+					console.log("Pretty Neat, huh?")
+				},274000);
+
 				renderFrame(); 
 			},
 			//catch errors 
@@ -148,8 +159,12 @@ function trigger(ev){
 	}, 50);
 }
 
-//Trigger everything on user click:
+
+
+//Application starts on user click:
 window.addEventListener('click', trigger, false);
+
+//Fire event when song ends
 
 		
 	
