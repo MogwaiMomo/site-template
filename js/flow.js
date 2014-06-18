@@ -178,15 +178,18 @@ function trigger(ev){
 }
 
 function rollcredits() {
-	console.log("Roll Credits, bitch!")
-	var container = document.getElementById("container");
-	var intro = document.getElementById("intro");
-	var canvas = document.getElementById("canvas");
-	var instruct = document.getElementById("instruct");
-	//remove existing elements
-	container.removeChild(intro);
-	container.removeChild(canvas);
-	container.removeChild(instruct);
+	setTimeout(function(){
+		console.log("Roll Credits, bitch!")
+		var container = document.getElementById("container");
+		var intro = document.getElementById("intro");
+		var canvas = document.getElementById("canvas");
+		var instruct = document.getElementById("instruct");
+		
+		//remove existing elements
+		container.removeChild(intro);
+		container.removeChild(canvas);
+		container.removeChild(instruct);
+	}, 2000);
 }
 
 
