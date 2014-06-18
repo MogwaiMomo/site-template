@@ -83,8 +83,7 @@
   -o-animation:      fade 1s; 
   animation:         fade 1s;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode:forwards;  Safari and Chrome 
-}
+  -webkit-animation-fill-mode:forwards;}
 
 @-webkit-keyframes fade {
   0%   { opacity: 1; }
@@ -112,4 +111,4 @@
 */
 .border {
 	border:solid 2px red;
-};
+}
