@@ -142,8 +142,11 @@ function loadSound(context, url) {
 
 				renderFrame();
 				canvas.addEventListener('click', function(){
+					//stop song
 					soundSource.disconnect(0);
+					//fade canvas and instructions
 					document.getElementById('canvas').className += " fade";
+					document.getElementById('instruct').className += " fade";
 					}, false);
  
 			},
