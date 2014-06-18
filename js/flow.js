@@ -1,12 +1,3 @@
-// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
- 
-// requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
-
-// MIT license
-
-//reference codepen example: http://codepen.io/matt-west/pen/bGdEC?editors=001
-
 // Crazy vendor compatibility stuff starts //
  
 (function() {
@@ -76,10 +67,11 @@
 		requestAnimationFrame(animate);
 	}, false);
 
+	
+
 }());
 
 // Animation stuff ends here // 
-
 
 
 // Sound stuff starts here: //
@@ -115,17 +107,26 @@ function loadSound(context, url) {
 	// .onload is an event which fires when the request data has fully loaded
 	request.onload = function() {
 		// create the sound source:
-		soundSource = context.createBufferSource();
+		var soundSource = context.createBufferSource();
+		var analyser = context.createAnalyser();
 
 		// import callback function that provides decoded PCM audio data 
 		context.decodeAudioData(request.response, 
 			function(buffer) {
 				//transfer decoded audio data ("buffer") to sound source object
 				soundSource.buffer = buffer;
+				soundSource.connect(analyser);
+				var frequencyData = new Uint8Array(analyser.frequencyBinCount);
 
+				function renderFrame() {
+					requestAnimationFrame(renderFrame);
+					analyser.getByteFrequencyData(frequencyData);
+					console.log(frequencyData)
+	}
 				//connect to speakers
 				soundSource.connect(context.destination);
-				soundSource.start(0); 
+				soundSource.start(0);
+				renderFrame(); 
 			},
 			//catch errors 
 			function(e) {
@@ -150,11 +151,11 @@ function loadSound(context, url) {
 		document.getElementById('intro').className += " fade";
 	}, false);
 
-	
+	// Start the music
 
-	// window.addEventListener("click", function(ev){
-	// 	ev.preventDefault();
-	// 	init();
-	// }, false); 
+	window.addEventListener("click", function(ev){
+		ev.preventDefault();
+		init();
+	}, false); 
 		
 	
