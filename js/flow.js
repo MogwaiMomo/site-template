@@ -65,6 +65,14 @@
 		
 	  }
 
+	  //Start the animation
+	window.addEventListener('click', function(ev){
+		ev.preventDefault();
+		requestAnimationFrame(animate);
+	}, false);
+
+}());
+
 // Animation stuff ends here // 
 
 
@@ -137,15 +145,11 @@ function loadSound(context, url) {
 		document.getElementById('intro').className += " fade";
 	}, false);
 
-	//Start the animation
-	window.addEventListener('click', function(ev){
-		ev.preventDefault();
-		requestAnimationFrame(animate);
-	}, false);
+	
 
 	window.addEventListener("click", function(ev){
 		ev.preventDefault();
 		init();
 	}, false); 
 		
-	}());
+	
