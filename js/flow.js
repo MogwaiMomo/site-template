@@ -138,6 +138,7 @@ function loadSound(context, url) {
 				setTimeout(function(){
 					document.getElementById('canvas').className += " fade";
 					document.getElementById('instruct').className += " fade";
+					rollcredits();
 					
 				},274000);
 
@@ -189,7 +190,11 @@ function rollcredits() {
 		container.removeChild(intro);
 		container.removeChild(canvas);
 		container.removeChild(instruct);
-	}, 2000);
+
+		//add in an element:
+		document.getElementById('credits').className = "appear col span_2_of_3 item";
+	}, 1500);
+	
 }
 
 

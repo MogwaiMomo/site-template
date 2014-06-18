@@ -51,11 +51,15 @@ h4 {
 h5 {
   font-size: 17px;
   font-weight: lighter;
+  padding-bottom:1%;
+  margin-bottom: 1%;
 
 }
 
 h6 {
   font-size: 15px;
+  font-weight: lighter;
+
 }
 
 /* `Spacing
@@ -66,14 +70,10 @@ ol {
 }
 
 ul {
-  list-style: disc;
+  list-style: none;
 }
 
-li {
-  margin-left: 30px;
-}
 
-p,
 dl,
 hr,
 h1,
@@ -91,3 +91,10 @@ fieldset,
 figure {
   margin-bottom: 20px;
 }
+
+p {
+  font-size: 1.5em;
+  font-weight:lighter;
+  margin-bottom: 1%;
+}
+
