@@ -137,6 +137,7 @@ function loadSound(context, url) {
 				soundSource.start(0);
 				setTimeout(function(){
 					document.getElementById('canvas').className += " fade";
+					document.getElementById('instruct').className += " fade";
 					
 				},274000);
 
@@ -147,7 +148,11 @@ function loadSound(context, url) {
 					//fade canvas and instructions
 					document.getElementById('canvas').className += " fade";
 					document.getElementById('instruct').className += " fade";
+					//roll credits
+					rollcredits();
 					}, false);
+					
+					
  
 			},
 			//catch errors 
@@ -160,6 +165,8 @@ function loadSound(context, url) {
 	request.send();
 };
 
+
+
 function trigger(ev){
 	ev.preventDefault();
 	document.getElementById('intro').className += " fade";
@@ -170,9 +177,12 @@ function trigger(ev){
 	}, 50);
 }
 
-// function rollcredits() {
-// 	//add a node
-// }
+function rollcredits() {
+	console.log("Roll Credits, bitch!")
+	//remove existing elements, add my own
+	
+
+}
 
 
 //Application starts on user click:
