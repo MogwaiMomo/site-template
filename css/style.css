@@ -34,7 +34,7 @@
 
 #instruct {
   margin: 0;
-  padding-top:3px;
+  padding: 0; 
 }
 
 .hidden {

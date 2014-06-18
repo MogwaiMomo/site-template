@@ -55,7 +55,7 @@ function init(){
 		else {
 			cancelAnimationFrame(requestID);
 			document.getElementById('canvas').className += " white";
-			document.getElementById('instruct').className = " appear";
+			document.getElementById('instruct').className = "appear col span_2_of_3 item";
 			sound();
 
 		}
