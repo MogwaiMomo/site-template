@@ -1,4 +1,4 @@
-// Shim starts //
+// RequestAnimationFrame shim starts //
  
 (function() {
     var lastTime = 0;
@@ -25,7 +25,7 @@
         };
 }());
 
-// Shim ends //
+// RequestAnimationFrame shim ends //
 
 //Start drawing the canvas
 var canvas = document.getElementById('canvas');		
@@ -179,9 +179,14 @@ function trigger(ev){
 
 function rollcredits() {
 	console.log("Roll Credits, bitch!")
-	//remove existing elements, add my own
-	
-
+	var container = document.getElementById("container");
+	var intro = document.getElementById("intro");
+	var canvas = document.getElementById("canvas");
+	var instruct = document.getElementById("instruct");
+	//remove existing elements
+	container.removeChild(intro);
+	container.removeChild(canvas);
+	container.removeChild(instruct);
 }
 
 
