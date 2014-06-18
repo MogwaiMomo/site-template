@@ -56,12 +56,17 @@
 
 	// Animate (fill the canvas gradually):
 	function animate() {
-		requestAnimationFrame(animate);
+		requestID = requestAnimationFrame(animate);
 		if (boxHeight <= canvas.height) {
 			ctx.clearRect(0, 0, boxHeight, canvas.width);
 			ctx.fillRect(0, 0, canvas.width, boxHeight);
 			boxHeight += pixelsPerFrame;
 		} 
+		else {
+			cancelAnimationFrame(requestID);
+			ctx.clearRect((canvas.width)/4, (canvas.height)/4, (canvas.width)/2, (canvas.height)/2);
+			// ctx.fillRect(0, 0, canvas.width, canvas.height);
+		}
 		
 	  }
 
@@ -147,9 +152,9 @@ function loadSound(context, url) {
 
 	
 
-	window.addEventListener("click", function(ev){
-		ev.preventDefault();
-		init();
-	}, false); 
+	// window.addEventListener("click", function(ev){
+	// 	ev.preventDefault();
+	// 	init();
+	// }, false); 
 		
 	
