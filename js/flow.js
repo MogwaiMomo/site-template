@@ -55,7 +55,9 @@ function init(){
 		else {
 			cancelAnimationFrame(requestID);
 			document.getElementById('canvas').className += " white";
+			document.getElementById('instruct').className = " appear";
 			sound();
+
 		}
 		
 	  }
@@ -134,10 +136,16 @@ function loadSound(context, url) {
 				soundSource.connect(context.destination);
 				soundSource.start(0);
 				setTimeout(function(){
-					console.log("Pretty Neat, huh?")
+					document.getElementById('canvas').className += " fade";
+					
 				},274000);
 
-				renderFrame(); 
+				renderFrame();
+				canvas.addEventListener('click', function(){
+					soundSource.disconnect(0);
+					document.getElementById('canvas').className += " fade";
+					}, false);
+ 
 			},
 			//catch errors 
 			function(e) {
@@ -159,12 +167,16 @@ function trigger(ev){
 	}, 50);
 }
 
+// function rollcredits() {
+// 	//add a node
+// }
 
 
 //Application starts on user click:
 window.addEventListener('click', trigger, false);
 
-//Fire event when song ends
+
+
 
 		
 	

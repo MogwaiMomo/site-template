@@ -13,12 +13,16 @@
 
 <body id="page">
 	<div class="section group container">
+		<div id="intro" class="appear col span_2_of_3 item">
 			
-		<h1 id="intro" class="appear col span_2_of_3 item">Click anywhere to start the show...</h1>
+			<h1>Click anywhere to start the show...</h1>
+			<h5>P.S. This project plays music! <br>(Please put earphones on to avoid disturbing others around you.)</h5>
 
-		<canvas id="canvas" class="col span_2_of_3 item">Your browser needs to support the HTML5 canvas element before this show can play.</canvas> 
-		
 		</div>
+
+		<canvas id="canvas" class="col span_2_of_3 item">Your browser needs to support the HTML5 canvas element before this show can play.</canvas>
+
+		<div class="col span_2_of_3 item"><h5 id="instruct" class="hidden">(Click anywhere on the canvas to end the show.)</h5></div> 
 		
 	</div>
 
@@ -31,6 +35,9 @@
 
 		<!-- On click:
 
-		5. Add visualization to canvas
-		6. Canvas fades out; "The End" appears on screen
+		5. Canvas Fade-Out; extra explanatory text at start - DONE
+		6. Add ability to end on click - DONE & text - DONE
+		6. Readme text appears underneath when canvas is done rolling down
+
+		7. Canvas fades out; "The End" appears on screen
 		 -->
