@@ -37,6 +37,10 @@
   padding: 0; 
 }
 
+.invisible {
+  visibility:hidden;
+}
+
 .hidden {
   display:none;
 }

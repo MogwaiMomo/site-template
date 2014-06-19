@@ -1,6 +1,9 @@
 # Motion Graphics Project
 by Momoko Price, for IxD Essentials  
 
+
+[DOWNLOAD THE PROJECT ZIP FILE](https://github.com/MogwaiMomo/Motion-Graphics-Project)
+
 ## PROJECT REQUIREMENTS 
 1) To view this project locally, it needs to run on a web server (aka by opening up http://localhost:8000, etc., _not_ by opening index.html directly through your web browser). Without a web server, your browser will not allow the mp3 to run and the animation won't work. 
 
