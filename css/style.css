@@ -36,6 +36,8 @@ body {
 
 #canvas {
   background-color: #fff;
+  width: 50%;
+  height: 50%;
 }
 
 /* classes for troubleshooting & changing elements */
