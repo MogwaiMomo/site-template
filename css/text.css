@@ -1,5 +1,5 @@
 /*
-  960 Grid System ~ Text CSS.
+  Customized from '960 Grid System ~ Text CSS.'
   Learn more ~ http://960.gs/
 
   Licensed under GPL and MIT.
@@ -9,8 +9,8 @@
 ----------------------------------------------------------------------------------------------------*/
 
 body {
-  background-color: #0e0e0e;
-  color: #fefefe;
+  background-color: #fefefe; /* white background */
+  color: #0e0e0e; /* black text */
   font: 13px/1.5 "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
   letter-spacing: 0.06em;
 }
@@ -32,7 +32,6 @@ hr {
 
 h1 {
   font-size: 25px;
-  font-weight: lighter;
 
 }
 
@@ -50,15 +49,11 @@ h4 {
 
 h5 {
   font-size: 17px;
-  font-weight: lighter;
-  padding-bottom:1%;
-  margin-bottom: 1%;
 
 }
 
 h6 {
   font-size: 15px;
-  font-weight: lighter;
 
 }
 
@@ -73,7 +68,7 @@ ul {
   list-style: none;
 }
 
-
+p,
 dl,
 hr,
 h1,
@@ -90,11 +85,6 @@ address,
 fieldset,
 figure {
   margin-bottom: 20px;
-}
-
-p {
   font-size: 1.5em;
-  font-weight:lighter;
-  margin-bottom: 1%;
 }
 

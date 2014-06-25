@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>Motion Graphics Project</title>
+	<title>Workflow Interactive</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1">
 	<link rel="stylesheet" href="css/reset.css">
@@ -11,51 +11,12 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body id="page">
-	<div id="container" class="section group container">
-		<div id="intro" class="appear col span_2_of_3 item">
-			
-			<h1>Click anywhere to start the show...</h1>
-			<h5>P.S. This project plays music! <br>(Please put earphones on to avoid disturbing others around you.)</h5>
-
-		</div>
-
-		<canvas id="canvas" class="col span_2_of_3 item">Your browser needs to support the HTML5 canvas element before this show can play.</canvas>
-
-		<div id="instruct" class="col span_2_of_3 item invisible"><h5>(Click anywhere on the canvas to end the show.)</h5></div> 
-
-		<div id="credits" class="col span_2_of_3 item hidden">
-			
-			<h1>Credits</h1>
-			<hr>
-			<p><strong>Song:</strong></p> 
-			<p>"In The Lost and Found (Honky Bach)", by Elliott Smith</p>
-			<br> 
-			<p><strong>Coded using:</strong></p> 
-			<ul>
-				<li><p>Responsive Grid System</p><li>
-				<li><p>FlexBox layout</p></li>
-				<li><p>CSS animation</p><li>
-				<li><p>HTML5 Canvas Animation (RequestAnimationFrame)</p><li>
-				<li><p>HTML5 Audio API</p><li>
-				<li><p>... aaaaaand a <em>buttload</em> of janky JavaScript :)</p><li>
-			<br>
-			<p><small>Thanks for checking out my project! <em>  -Momoko</em></small></p>
-			</ul>
-
-		</div>
-		
+<body>
+	<div id="container" class="flex-container border">
+		<canvas id="canvas" class="flex-item border">Oh, snap! This browser does not support HTML5 canvas (which is needed to display this page's animated content). Please upgrade your browser to fix this problem.</canvas>	
 	</div>
-
-	<script type="text/javascript" src="js/flow.js"></script>
-
+		<script type="text/javascript" src="js/utils.js"></script>
+		<script type="text/javascript" src="js/animation.js"></script>	
 </body>
 
 </html>
-
-
-		<!-- On click:
-
-		7. LAST ITEM: Roll Credits
-
-		 -->

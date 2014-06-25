@@ -4,8 +4,9 @@
  }
 
  /* add Flexbox for easy positioning and alignment */
- .container {
-  background-color:#000000;
+ 
+ /* adjust as needed */
+ .flex-container {
 	height: 100%;
 	flex-flow: row wrap;
 	display: -webkit-box;
@@ -18,24 +19,26 @@
 
 }
 
-.item {
+ /* adjust as needed */
+.flex-item {
   position:relative;
-  top:-10%;
 	text-align: center;
   padding:0;
   margin:0;
 }
 
-#intro {
-  position:relative;
-  top:40%; 
-  margin:0;
+
+/* Page styles */
+
+body {
+  background-color: #bbb;
 }
 
-#instruct {
-  margin: 0;
-  padding: 0; 
+#canvas {
+  background-color: #fff;
 }
+
+/* classes for troubleshooting & changing elements */
 
 .invisible {
   visibility:hidden;
@@ -45,74 +48,6 @@
   display:none;
 }
 
-/* Canvas styling */
-
-#canvas {
-  height: 80%;
-  padding:0;
-  margin:0;
-}
-
-/* animations */
-
-.appear {
-  -webkit-animation: appear 3s; 
-  -moz-animation:    appear 3s; 
-  -o-animation:      appear 3s; 
-  animation:         appear 3s;
-}
-
-
-@-webkit-keyframes appear {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-@-moz-keyframes appear {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-@-o-keyframes appear {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes appear {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.fade {
-  -webkit-animation: fade 1s; 
-  -moz-animation:    fade 1s; 
-  -o-animation:      fade 1s; 
-  animation:         fade 1s;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode:forwards;}
-
-@-webkit-keyframes fade {
-  0%   { opacity: 1; }
-  100% { opacity: 0; }
-}
-@-moz-keyframes fade {
-  0%   { opacity: 1; }
-  100% { opacity: 0; }
-}
-@-o-keyframes fade {
-  0%   { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@keyframes fade {
-  0%   { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-.white {
-  background-color:#fefefe;
-}
-
- /*for troubleshooting layout 
-*/
 .border {
 	border:solid 2px red;
 }
