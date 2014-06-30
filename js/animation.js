@@ -1,10 +1,10 @@
 window.onload = function() {
 	var canvas = document.getElementById('canvas');
-	canvas.addEventListener('mousedown', function(event) {
-		console.log("mouse down");
-		}, false);
-
-	canvas.addEventListener('mouseup', function(event) {
-		console.log("mouse up");
-		}, false);
-};
+	// set cross-browser, canvas-specific positioning for mousemove
+	mouse = utils.captureMouse(canvas);
+	
+	// add event Listener and handler to test:
+	canvas.addEventListener('mousedown', function() {
+				console.log("x: " + mouse.x + ", y: " + mouse.y);
+			}, false);
+	};
