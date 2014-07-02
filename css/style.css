@@ -1,12 +1,3 @@
-/* Page styles */
-body {
-  background-color: #bbb; }
-
-#canvas {
-  background-color: #fff;
-  width: 50%;
-  height: 50%; }
-
 /* Classes for troubleshooting & changing elements */
 .invisible {
   visibility: hidden; }
@@ -15,4 +6,4 @@ body {
   display: none; }
 
 .border {
-  border: solid 2px red; }
+  border: solid 2px white; }

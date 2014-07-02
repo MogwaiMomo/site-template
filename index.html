@@ -4,15 +4,31 @@
 <head>
 	<title>Event Demo</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="initial-scale=1">
+	<meta name="viewport" content="deviceinitial-scale=1">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/layout.css">
 	<link rel="stylesheet" href="css/style.css">
+	
 </head>
 
 <body>
-	<div id="container" class="flex-container border">
-		<canvas id="canvas" class="flex-item border">Oh, snap! This browser does not support HTML5 canvas (which is needed to display this page's animated content). Please upgrade your browser to fix this problem.</canvas>	
+	
+	<ul class="navigation">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Products</a></li>
+			<li><a href="#">Contact</a></li>
+	</ul>
+	<div class="wrapper">
+		<header class="header"><h1>HEADER: Product Design, The Kantan Way</h1></header>
+	
+		<section class="hero"><canvas>Oh, snap! This browser does not support HTML5 canvas (which is needed to display this page's animated content). Please upgrade your browser to fix this problem.</canvas></section>
+
+		<aside class="aside aside-left"><h2>ASIDE: Stuff on the Left</h2></aside>
+		<aside class="aside aside-right"><h2>ASIDE: Stuff on the Right</h2></aside>
+		
+		<footer class="footer"><p>FOOTER: Here is the footer.</p></footer>
+
 	</div>
 		<script type="text/javascript" src="js/utils.js"></script>
 		<script type="text/javascript" src="js/animation.js"></script>	

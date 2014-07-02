@@ -1,0 +1,52 @@
+@import "all";
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+
+@mixin flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  border: solid 2px red;
+}
+
+
+ /* add Flexbox for easy positioning and alignment */
+ 
+.wrapper {
+  @include flex; 
+
+}
+
+.navigation {
+  @include flex;
+  justify-content: flex-end; 
+}
+
+.navigation > * {
+  padding: 20px;
+  border: solid 2px blue;
+}
+.wrapper > * {
+  padding: 20px;
+  border: solid 2px blue;
+}
+
+
+.header, .footer {
+  width: 100%;
+}
+
+@media all and (min-width: 800px) {
+  // .hero { flex: 2 0px; }
+  .aside-1 { order: 2; }
+  .hero    { order: 1; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
