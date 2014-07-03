@@ -1,9 +1,18 @@
+* {
+  font-family: "Source Sans Pro", "Open Sans", sans-serif; }
+
+body {
+  background-color: #bbbbbb; }
+
+.navigation > *,
+.header,
+.col-wrapper > * {
+  background-color: #fefefe;
+  border: solid 1px #bbbbbb; }
+
 /* Classes for troubleshooting & changing elements */
 .invisible {
   visibility: hidden; }
 
 .hidden {
   display: none; }
-
-.border {
-  border: solid 2px white; }

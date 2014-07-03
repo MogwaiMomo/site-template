@@ -1,5 +1,5 @@
 window.onload = function() {
-	var canvas = document.getElementById('canvas');
+	var canvas = document.getElementById('graphic');
 	// set cross-browser, canvas-specific positioning for mousemove
 	mouse = utils.captureMouse(canvas);
 	

@@ -1,7 +1,23 @@
-// Sass stuff: 
+@import 'all';
 
-$base-color: black;
-$background-color: #bbb;
+* {
+	font-family: $body-font;
+}
+
+body {
+	background-color: $base-color;
+}
+
+
+.navigation > *,
+.header,
+.col-wrapper > * {
+	background-color: $fill-color;
+	border: $border;
+}
+
+
+
 
 
 
@@ -15,6 +31,4 @@ $background-color: #bbb;
   display:none;
 }
 
-.border {
-	border:solid 2px white;
-}
+

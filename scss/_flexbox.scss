@@ -6,7 +6,7 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  border: solid 2px red;
+  // border: solid 2px red;
 }
 
 @mixin flex-flow($values){
@@ -36,6 +36,5 @@
 }
 
 
- /* Flexbox for easy positioning and alignment */
  
 

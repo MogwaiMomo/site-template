@@ -1,0 +1,93 @@
+// 9-box layout (includes nav, header, footer)
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+@import 'all';
+
+ .navigation {
+  @include flexbox();
+  @include flex-flow(row wrap);
+  width: 100%;
+  justify-content: flex-end; 
+}
+
+
+.navigation > * {
+  padding: 1.5em;
+}
+
+
+.col-wrapper {
+  @include flexbox(); 
+  @include flex-flow(column nowrap);
+  width: 100%;
+  justify-content: center;
+}
+
+.col-wrapper > * {
+  text-align: center;
+  padding: 1.5em;
+}
+
+
+.row-wrapper {
+  @include flexbox(); 
+  @include flex-flow(row wrap);
+  width: 100%;
+  justify-content: center;
+}
+
+.row-wrapper > * {
+  text-align: center;
+  padding: 1.5em;
+}
+
+
+.box {
+  width: 33.33333333%;
+}
+
+
+// responsive breakpoints
+
+// 1. Small-screen
+
+@media all and (max-width: 40em) {
+  .navigation {
+    @include flex-flow(column nowrap);
+  }
+  .navigation > * {
+    @include flex(1 100%);
+    text-align: center;
+  }
+
+  .box {
+    width: 100%;
+  }
+}
+
+// 2. Medium-screen
+
+@media all and (max-width: 50em) {
+  .navigation {
+    @include flex-flow(row wrap);
+    @include flex(1 100%);
+    @include justify-content(center);
+  } 
+
+}
+
+
+// 3. Large-screen
+
+@media all and (min-width: 50em) {
+   .navigation {
+    @include flex-flow(row wrap);
+    @include flex(1 100%);
+    @include justify-content(flex-end);
+  } 
+}
+
