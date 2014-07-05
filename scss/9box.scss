@@ -14,18 +14,6 @@
   justify-content: flex-end; 
 }
 
-//  .navigation {
-//   @include flexbox();
-//   @include flex-flow(row wrap);
-//   width: 100%;
-//   justify-content: flex-end; 
-// }
-
-
-// .navigation > * {
-//   padding: 1.5em;
-// }
-
 #logo {
   position: absolute;
   width: 150px;
@@ -41,7 +29,7 @@
   width: 77px;
   height: 36px;
   background: url(../img/menu-icon.png) no-repeat center;
-  margin: 14px;
+  margin: 15px;
   justify-content: flex-end;
 }
 
@@ -75,7 +63,7 @@
 }
 
 
-// responsive breakpoints
+// Responsive breakpoints
 
 // 1. Small-screen
 
@@ -86,19 +74,8 @@
   }
 }
 
-// // 2. Medium-screen
 
-// @media all and (max-width: 50em) {
-//   .navigation {
-//     @include flex-flow(row wrap);
-//     @include flex(1 100%);
-//     @include justify-content(center);
-//   } 
-
-// }
-
-
-// 3. Large-screen
+// 2. Large-screen
 
 @media all and (min-width: 50em) {
    .navigation {
