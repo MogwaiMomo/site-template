@@ -1,4 +1,4 @@
-# Workflow Interactive Map
+# Kantan.io website
 by Momoko Price, momoko@copy-cat.co  
 
 ## TO DO LIST: 
