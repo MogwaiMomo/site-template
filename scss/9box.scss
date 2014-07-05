@@ -1,4 +1,4 @@
-// 9-box layout (includes nav, header, footer)
+// 9-box responsive layout (includes nav, header, footer, hamburger menu icon)
 
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
@@ -7,18 +7,43 @@
 
 @import 'all';
 
- .navigation {
+ .header {
   @include flexbox();
   @include flex-flow(row wrap);
   width: 100%;
   justify-content: flex-end; 
 }
 
+//  .navigation {
+//   @include flexbox();
+//   @include flex-flow(row wrap);
+//   width: 100%;
+//   justify-content: flex-end; 
+// }
 
-.navigation > * {
-  padding: 1.5em;
+
+// .navigation > * {
+//   padding: 1.5em;
+// }
+
+#logo {
+  position: absolute;
+  width: 150px;
+  height: 36px;
+  background: url(../img/logo.png) no-repeat center;
+  top: 15px; 
+  left: 10px;
 }
+  
 
+#menu-icon {
+  display: block;
+  width: 77px;
+  height: 36px;
+  background: url(../img/menu-icon.png) no-repeat center;
+  margin: 14px;
+  justify-content: flex-end;
+}
 
 .col-wrapper {
   @include flexbox(); 
@@ -31,7 +56,6 @@
   text-align: center;
   padding: 1.5em;
 }
-
 
 .row-wrapper {
   @include flexbox(); 
@@ -55,30 +79,23 @@
 
 // 1. Small-screen
 
-@media all and (max-width: 40em) {
-  .navigation {
-    @include flex-flow(column nowrap);
-  }
-  .navigation > * {
-    @include flex(1 100%);
-    text-align: center;
-  }
-
+@media all and (max-width: 53em) {
+ 
   .box {
     width: 100%;
   }
 }
 
-// 2. Medium-screen
+// // 2. Medium-screen
 
-@media all and (max-width: 50em) {
-  .navigation {
-    @include flex-flow(row wrap);
-    @include flex(1 100%);
-    @include justify-content(center);
-  } 
+// @media all and (max-width: 50em) {
+//   .navigation {
+//     @include flex-flow(row wrap);
+//     @include flex(1 100%);
+//     @include justify-content(center);
+//   } 
 
-}
+// }
 
 
 // 3. Large-screen

@@ -1,18 +1,15 @@
-# Workflow Interactive Map
+# Kantan.io website
 by Momoko Price, momoko@copy-cat.co  
 
 ## TO DO LIST: 
 
-- Add Kantan Logo and responsive menu icon
-- Set up Responsive Grid - DONE
-- Add flex-box browser compatibility - DONE
+- Write and design all content
+- Add main nav page & open/close transition - IN  PROGRESS
+using: http://tympanus.net/Development/ArticleIntroEffects/index3.html
 
-## PROJECT SUMMARY
+-Add Kantan Logo and responsive menu icon DONE-
+-Set up Responsive Grid DONE-
+-Add flex-box browser compatibility DONE-
 
-This interactive "Game of Life"-like animation helps you follow an optimized, strategic workflow every time you start a web project. 
-
-The first stage of the map (top level, for desktop screens) is for messaging.
-The second stage (middle row) is for design.
-The third state (bottom row) is for development.
 
 
