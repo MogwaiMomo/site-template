@@ -1,7 +1,7 @@
 @import 'all';
 
 * {
-	font-family: $body-font;
+	@include body-font();
 }
 
 body {
@@ -9,8 +9,8 @@ body {
 }
 
 h1 {
-	font-family: $header-font-family;
-	font-size: $header-font-size;
+	@include headline-font();
+	margin-bottom: 2em;
 }
 
 .header,
@@ -27,9 +27,16 @@ h1 {
 	text-align: center;
 	padding: 1em;
 }
+
 .footer h1 {
-	font-size: $header-font-size/2;
+	@include body-font();
 }
+
+p {
+	@include body-font();
+	padding: 0 0 0 0;
+}
+
 
 /* Classes for troubleshooting & changing elements */
 

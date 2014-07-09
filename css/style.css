@@ -3,14 +3,20 @@
   src: url("SinaNovaReg-webfont.eot?") format("eot"), url("SinaNovaReg-webfont.woff") format("woff"), url("SinaNovaReg-webfont.ttf") format("truetype"); }
 
 * {
-  font-family: "Source Sans Pro", "Open Sans", sans-serif; }
+  font-family: "Source Sans Pro", "Open Sans", sans-serif;
+  color: #0e0e0e;
+  font-size: 1.2em;
+  font-weight: 500; }
 
 body {
   background-color: #fefefe; }
 
 h1 {
-  font-family: "Sina Nova";
-  font-size: 2.2em; }
+  font-family: "Source Sans Pro", "Open Sans", sans-serif;
+  color: #0e0e0e;
+  font-size: 2.2em;
+  font-weight: 600;
+  margin-bottom: 2em; }
 
 .header,
 .col-wrapper > * {
@@ -25,7 +31,17 @@ h1 {
   padding: 1em; }
 
 .footer h1 {
-  font-size: 1.1em; }
+  font-family: "Source Sans Pro", "Open Sans", sans-serif;
+  color: #0e0e0e;
+  font-size: 1.2em;
+  font-weight: 500; }
+
+p {
+  font-family: "Source Sans Pro", "Open Sans", sans-serif;
+  color: #0e0e0e;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 0 0 0 0; }
 
 /* Classes for troubleshooting & changing elements */
 .invisible {
