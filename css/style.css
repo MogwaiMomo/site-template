@@ -2,44 +2,21 @@
   font-family: "Sina Nova";
   src: url("SinaNovaReg-webfont.eot?") format("eot"), url("SinaNovaReg-webfont.woff") format("woff"), url("SinaNovaReg-webfont.ttf") format("truetype"); }
 
-* {
-  font-family: "Source Sans Pro", "Open Sans", sans-serif;
-  color: #0e0e0e;
-  font-size: 1.2em;
-  font-weight: 500; }
+#div1 {
+  background-color: red;
+  border: solid 2px red; }
 
-body {
-  background-color: #fefefe; }
+#div2 {
+  background-color: green; }
+
+#div3 {
+  background-color: blue; }
 
 h1 {
-  font-family: "Source Sans Pro", "Open Sans", sans-serif;
-  color: #0e0e0e;
-  font-size: 2.2em;
-  font-weight: 600; }
-
-.header,
-.col-wrapper > * {
-  background-color: #fefefe; }
-
-.box {
-  background-color: #cbcbcb; }
-
-.footer {
-  text-align: center;
-  padding: 1em; }
-
-.footer h1 {
-  font-family: "Source Sans Pro", "Open Sans", sans-serif;
-  color: #0e0e0e;
+  font-family: "Open Sans", "Source Sans Pro", sans-serif;
+  color: #fefefe;
   font-size: 1.2em;
   font-weight: 500; }
-
-p {
-  font-family: "Source Sans Pro", "Open Sans", sans-serif;
-  color: #0e0e0e;
-  font-size: 1.2em;
-  font-weight: 500;
-  padding: 0 0 0 0; }
 
 /* Classes for troubleshooting & changing elements */
 .invisible {

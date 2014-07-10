@@ -1,38 +1,22 @@
 @import 'all';
 
-* {
-	@include body-font();
+
+#div1 {
+	background-color: red;
+	border: solid 2px red;
 }
 
-body {
-	background-color: $fill-color;
+
+#div2 {
+	background-color: green;
+}
+
+#div3 {
+	background-color: blue;
 }
 
 h1 {
-	@include headline-font();
-}
-
-.header,
-.col-wrapper > * {
-	background-color: $fill-color;
-}
-
-.box {
-	background-color: darken($fill-color, 20%);
-}
-
-.footer {
-	text-align: center;
-	padding: 1em;
-}
-
-.footer h1 {
 	@include body-font();
-}
-
-p {
-	@include body-font();
-	padding: 0 0 0 0;
 }
 
 
