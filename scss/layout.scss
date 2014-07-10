@@ -5,6 +5,15 @@
 
 @import 'all';
 
+.logo {
+  background-color: #bbb;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  text-align: center;
+  padding: 1.5em;
+}
+
 
 .col-wrapper {
   @include flexbox(); 
@@ -12,11 +21,35 @@
   width: 100%;
   justify-content: center;
   align-content: center;
+  border: dashed 1px #666;
 }
  
 .col-wrapper > * {
   text-align: center;
   padding: 1.5em;
+  border: solid 1px #666;
+}
+
+
+.nav-wrapper {
+  @include flexbox(); 
+  @include flex-flow(row wrap);
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: 20px;
+  align-content: center;
+  border: dotted 1px #666;
+}
+
+.nav-wrapper > * {
+  text-align: center;
+  padding: 1.5em;
+  margin: 1em 0 1em 0;
+  border: solid 1px #666;
+}
+
+#menu {  // mobile menu icon
+  display:none;
 }
 
 .row-wrapper {
@@ -25,11 +58,14 @@
   width: 100%;
   justify-content: center;
   align-content: center;
+  border: dotted 1px #666;
 }
 
 .row-wrapper > * {
   text-align: center;
   padding: 1.5em;
+  margin: 1em 0 1em 0;
+  border: solid 1px #666;
 }
 
 
@@ -42,9 +78,13 @@
 // 1. Small-screen
 
 @media all and (max-width: 53em) {
- 
+  ul li {
+    display: none;
+  }
+  #menu {  // mobile menu icon
+  display:block;
 }
-
+}
 
 // 2. Large-screen
 

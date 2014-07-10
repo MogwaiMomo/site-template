@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Sina Nova";
-  src: url('SinaNovaReg-webfont.eot?') format('eot'), url('SinaNovaReg-webfont.woff') format('woff'), url('SinaNovaReg-webfont.ttf') format('truetype');
+  src: url('../font/SinaNovaReg-webfont.eot?') format('eot'), url('../font/SinaNovaReg-webfont.woff') format('woff'), url('../font/SinaNovaReg-webfont.ttf') format('truetype');
 }
 
 @mixin headline-font() {
@@ -18,4 +18,5 @@ font-weight: 500;
 }
 
 
+$base-font-size: 2.2em;
 

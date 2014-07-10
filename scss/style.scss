@@ -16,9 +16,19 @@
 }
 
 h1 {
-	@include body-font();
+	@include headline-font();
 }
 
+h2 {
+	@include headline-font();
+	font-size: $base-font-size/2;
+}
+
+li, a, p {
+	@include headline-font();
+	font-size: $base-font-size/2.3;
+	text-decoration: none;
+}
 
 /* Classes for troubleshooting & changing elements */
 
