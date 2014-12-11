@@ -1,36 +1,169 @@
-@import 'all';
+/**
+ * CONTENTS
+ *
+ *
+ * NORMALIZE
+ * Reset.css........Level the playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ *
+ * GLOBAL
+ * Global...............Globally-available variables and config.
+ *
+ *
+ * CROSS-BROWSER PREFIXES
+ * Flexbox
+ * Animations
+ *
+ *
+ * MAIN COMPONENTS
+ * Main-head............The main page header.
+ * Main-foot............The main page footer.
+ * Buttons..............Button elements.
+ *
+ * PAGE-SPECIFIC COMPONENTS
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+ */
 
 
-#div1 {
-	background-color: red;
-	border: solid 2px red;
+/*------------------------------------*\
+#NORMALIZE
+\*------------------------------------*/
+
+@import "reset"; 
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+
+
+
+/*------------------------------------*\
+#GLOBAL
+\*------------------------------------*/
+
+@import "colors";
+@import "typography";
+
+
+
+
+
+/*------------------------------------*\
+#CROSS-BROWSER PREFIXES
+\*------------------------------------*/
+
+@import "prefixes";
+
+
+
+
+
+
+/*------------------------------------*\
+#MAIN COMPONENTS
+\*------------------------------------*/
+
+
+/* Main header positioning */ 
+
+header {
+  text-align: justify;
+  letter-spacing: 1px;
+  height: 8em;
+  padding: 2em 5%;
+}
+
+header h1,
+header nav {
+  display: inline-block;
+}
+
+header::after {
+  content:'';
+  display: inline-block;
+  width: 100%;
+}
+
+nav > * {
+  padding: 0 1rem;
+}
+
+.menu {  // mobile menu icon
+  display:none;
+}
+
+/* Main header media queries */ 
+
+
+@media all and (max-width: 53em) {
+  nav a {
+    display: none;
+  }
+  .menu {  // mobile menu icon
+  display:block;
+}
 }
 
 
-#div2 {
-	background-color: green;
+/* Main content positioning (Flexbox-based) */ 
+
+
+.col {
+  @include flexbox(); 
+  @include flex-flow(column nowrap);
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+ 
+.col > * {
+  text-align: center;
+  padding: 1.5em;
 }
 
-#div3 {
-	background-color: blue;
+
+.row {
+  @include flexbox(); 
+  @include flex-flow(row wrap);
+  width: 100%;
+  justify-content: center;
+  align-content: center;
 }
 
-h1 {
-	@include headline-font();
+.row > * {
+  text-align: center;
+  padding: 1.5em;
+  margin: 1em 0 1em 0;
 }
 
-h2 {
-	@include headline-font();
-	font-size: $base-font-size/2;
+
+
+
+
+
+/*------------------------------------*\
+#PAGE-SPECIFIC COMPONENTS
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+#TRUMPS
+\*------------------------------------*/
+
+.dashed-border {
+	border: dashed 1px #666;
 }
 
-li, a, p {
-	@include headline-font();
-	font-size: $base-font-size/2.3;
-	text-decoration: none;
+.solid-border {
+	border: solid 1px #666;
 }
-
-/* Classes for troubleshooting & changing elements */
 
 .invisible {
   visibility:hidden;
@@ -39,5 +172,11 @@ li, a, p {
 .hidden {
   display:none;
 }
+
+
+
+
+
+
 
 

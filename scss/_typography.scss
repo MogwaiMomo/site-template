@@ -3,20 +3,43 @@
   src: url('../font/SinaNovaReg-webfont.eot?') format('eot'), url('../font/SinaNovaReg-webfont.woff') format('woff'), url('../font/SinaNovaReg-webfont.ttf') format('truetype');
 }
 
+
+$base-font-size: 1rem;
+$base-font-weight: 500;
+$base-font-color: #999;
+
+
+
+$body-font-family: "Open Sans", "Source Sans Pro", sans-serif;
+$header-font-family: "Sina Nova", Georgia, serif;
+
+
+
 @mixin headline-font() {
-font-family: "Sina Nova";
-color: #999;
-font-size: 2.2em;
-font-weight: 600;
+	font-family: $header-font-family;
+	color: $base-font-color;
+	font-size: $base-font-size * 1.7;
+	font-weight: $base-font-weight * 1.2;
 }
 
 @mixin body-font() {
-font-family: "Open Sans", "Source Sans Pro", sans-serif;
-color: #999;
-font-size: 1.2em;
-font-weight: 500;
+	font-family: $body-font-family;
+	color: $base-font-color;
+	font-size: $base-font-size;
+	font-weight: $base-font-weight;
 }
 
 
-$base-font-size: 2.2em;
+h1 {
+	@include headline-font();
+}
+
+h2 {
+	@extend h1;
+	font-size: $base-font-size * 1.5;
+}
+
+li, a, p {
+	@include body-font();
+}
 
